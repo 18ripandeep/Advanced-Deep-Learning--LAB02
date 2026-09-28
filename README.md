@@ -17,7 +17,7 @@ python fix_stages.py  # runs each fix stage and saves a comparison plot
 Running `diagnose.py` shows that the mean absolute weight gradients across all hidden layers are `0.0000e+00`. This confirms the **Dead ReLU / Gradient Blackout** failure mode. The constant `-2.0` bias forces pre-activations to be negative, driving all ReLU outputs to zero and killing gradient backpropagation.
 
 ## Stages and Results
-* **Stage 0 (baseline):** final loss 0.0.6893
+* **Stage 0 (baseline):** final loss 0.6893
 * **Stage 1 (+ initialization):** final loss 0.3995
 * **Stage 2 (+ normalization):** final loss 0.2437
 * **Stage 3 (+ init & normalization):** final loss 0.1368
